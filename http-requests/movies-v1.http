@@ -1,0 +1,55 @@
+# @name Server health check
+GET {{host_version}}/healthcheck
+Accept: application/json
+Authorization: Bearer WFXZ2QMOPINA3NBQ75UTFWAWJQ
+
+###
+
+# @name List Movies
+GET {{host_version}}/movies
+Content-Type: application/json
+Authorization: Bearer WFXZ2QMOPINA3NBQ75UTFWAWJQ
+
+###
+
+# @name Create new movie
+POST {{host_version}}/movies
+Content-Type: application/json
+
+{
+  "title": "The breakfast Club",
+  "year": 1986,
+  "run_time": "96 mins",
+  "genres": [
+    "drama"
+  ]
+}
+
+###
+
+# @name Show Movie by id
+GET {{host_version}}/movies/4
+Content-Type: application/json
+
+###
+
+# @name Update movie
+PATCH {{host_version}}/movies/2
+Content-Type: application/json
+
+{
+  "title": "Black panther",
+  "year": 2018,
+  "run_time": "134 mins",
+  "genres": [
+    "sci-fi",
+    "action",
+    "adventure"
+  ]
+}
+
+###
+
+# @name Delete Movie by id
+DELETE {{host_version}}/movies/3
+Content-Type: application/json

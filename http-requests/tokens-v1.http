@@ -1,0 +1,12 @@
+# @name Create user
+POST {{host_version}}/tokens/authentication
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "danyel@example.com",
+  "password": "pa55word"
+}
+
+
+###

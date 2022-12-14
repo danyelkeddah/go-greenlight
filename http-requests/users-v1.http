@@ -1,0 +1,21 @@
+# @name Create user
+POST {{host_version}}/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "danyel",
+  "email": "danyel@example.com",
+  "password": "pa55word"
+}
+
+###
+
+# @name Activate user
+PUT {{host_version}}/users/activated
+Accept: application/json
+Content-Type: application/json
+
+{
+  "token": "XWRYQ6B4D4AM2HI3V4PGWQTBBM"
+}
